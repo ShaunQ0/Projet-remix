@@ -7,6 +7,8 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
+import TopNavbar from "./routes/Nav/TopNavbar";  // Import de la navbar
+import Footer from "./routes/Sections/Footer";  // Import du footer
 import "./tailwind.css";
 
 export const links: LinksFunction = () => [
@@ -24,7 +26,7 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,7 +34,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <TopNavbar />  {/* Navbar affichée sur toutes les pages */}
+        <main>{children}</main>
+        <Footer />  {/* Footer affiché sur toutes les pages */}
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -41,5 +45,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <Layout>
+      <Outlet /> {/* Affiche le contenu de la page en fonction de l'URL */}
+    </Layout>
+  );
 }
