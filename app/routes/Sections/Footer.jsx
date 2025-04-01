@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { Link } from "@remix-run/react";
+
 // Assets
 import LogoImg from "../../assets/svg/Logo";
 

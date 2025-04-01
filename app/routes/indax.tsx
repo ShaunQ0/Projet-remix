@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
+import TopNavbar from "./Nav/TopNavbar";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,6 +11,8 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
+    <>
+    <TopNavbar/>
     <div className="flex h-screen items-center justify-center">
       <div className="flex flex-col items-center gap-16">
         <header className="flex flex-col items-center gap-9">
@@ -59,9 +62,9 @@ export default function Index() {
         </nav>
       </div>
     </div>
+    </>
   );
 }
-
 const resources = [
   {
     href: "https://remix.run/start/quickstart",

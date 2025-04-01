@@ -12,9 +12,12 @@ import dal from '../img/dal.jpg';
 import raffaello from '../img/raffaelloSuperstar.jpg';
 import lupi from '../img/lupi.jpg';
 import portata from '../img/portata.jpg';
+import TopNavbar from "./Nav/TopNavbar";
 
 const Accueil = () => {
   return (
+    <>
+    <TopNavbar/>
     <div className="accueil-container">
       <div className="hero">
         <div className="hero-content"></div>
@@ -129,6 +132,7 @@ const Accueil = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

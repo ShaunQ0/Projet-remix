@@ -6,9 +6,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-
-import TopNavbar from "./routes/Nav/TopNavbar";  // Import de la navbar
-import Footer from "./routes/Sections/Footer";  // Import du footer
 import "./tailwind.css";
 
 export const links: LinksFunction = () => [
@@ -32,11 +29,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+        {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
       <body>
-        <TopNavbar />  {/* Navbar affichée sur toutes les pages */}
-        <main>{children}</main>
-        <Footer />  {/* Footer affiché sur toutes les pages */}
+        <main>
+          {children} {/* Contenu de la page */}
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>
