@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './MeetingReports.css';
+import '../styles/MeetingReports.css';
 
 function MeetingReports() {
   const [reports, setReports] = useState([]);

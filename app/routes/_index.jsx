@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/Accueil.css';
 import TabImg from './TabImg';
-import Actualite from './Actualite'; // Importer le composant Actualite
-import image from '../img/drapeau_italie2.jpg'; // Assure-toi que le chemin est correct
+import Actualite from './Actualite';
+import image from '../img/drapeau_italie2.jpg';
 import italieIcon from '../img/Italie_icon.png';
-import divinaCommedia from '../img/DivinaComedia.jpg';
+import divinaCommedia from '../img/DivinaCommedia.jpg';
 import zerocalcare from '../img/zerocalcare.jpg';
 import greenPea from '../img/greenPea.jpg';
 import sergio from '../img/sergio.jpg';
@@ -15,12 +15,17 @@ import portata from '../img/portata.jpg';
 import TopNavbar from "./Nav/TopNavbar";
 import Sidebar from "./Nav/Sidebar";
 
+// Ajoutez ici les imports pour les nouveaux composants
+import MeetingReports from "./MeetingReports";
+import Forums from "./Forums";
+
 const Accueil = () => {
   return (
     <>
-    <Sidebar/>
+      <Sidebar/>
       <TopNavbar />
       <div className="accueil-container">
+        
         {/* Section Hero avec image de fond et texte en overlay */}
         <div className="hero">
           <div className="hero-content">
@@ -136,6 +141,19 @@ const Accueil = () => {
               />
             </div>
           </div>
+        </div>
+
+        {/* AJOUT DES NOUVELLES SECTIONS */}
+        {/* Section des comptes rendus de réunion */}
+        <div className="accueil-container1">
+          <h1 className="txt3">Comptes rendus de réunion</h1>
+          <MeetingReports />
+        </div>
+
+        {/* Section du forum de questions */}
+        <div className="accueil-container1">
+          <h1 className="txt3">Forum de questions</h1>
+          <Forums />
         </div>
       </div>
     </>
