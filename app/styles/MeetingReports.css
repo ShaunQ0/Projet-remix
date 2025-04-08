@@ -1,0 +1,56 @@
+.meeting-reports {
+  max-width: 800px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #008C45;
+  text-align: center;
+}
+
+.meeting-reports ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meeting-reports li {
+  background: #f8f8f8;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 5px solid #CD212A;
+  transition: transform 0.2s ease-in-out;
+}
+
+.meeting-reports li:hover {
+  transform: scale(1.02);
+  background: #f0f0f0;
+}
+
+.meeting-reports h3 {
+  font-family: 'Merriweather', serif;
+  color: #008C45;
+  margin-bottom: 5px;
+}
+
+.meeting-reports p {
+  font-family: 'Lora', serif;
+  color: #333;
+  margin: 5px 0;
+}
+
+.meeting-reports a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  text-decoration: none;
+  background: #CD212A;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.meeting-reports a:hover {
+  background: #a71e22;
+}

@@ -1,0 +1,55 @@
+.forum-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2, h3 {
+    text-align: center;
+    color: #008C45; 
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #CD212A; 
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #b51d25;
+  }
+  
+  .question {
+    padding: 10px;
+    margin-top: 10px;
+    border-left: 4px solid #008C45;
+    background-color: #F4F5F0; 
+    border-radius: 4px;
+  }
+  
+  .response {
+    margin-left: 20px;
+    padding: 5px;
+    border-left: 3px solid #CD212A;
+    font-size: 0.9rem;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+  }
+  
