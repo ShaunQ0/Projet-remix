@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import BlogBox from "../Elements/BlogBox";
-import FullButton from "../Buttons/FullButton";
+import BlogBox from "./Elements/BlogBox";
+import FullButton from "./Buttons/FullButton";
 //Assets
 import HeaderImage from "../../assets/img/Activites/Header-Activites.jpg";
 

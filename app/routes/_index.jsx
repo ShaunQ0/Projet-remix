@@ -13,10 +13,12 @@ import raffaello from '../img/raffaelloSuperstar.jpg';
 import lupi from '../img/lupi.jpg';
 import portata from '../img/portata.jpg';
 import TopNavbar from "./Nav/TopNavbar";
+import Sidebar from "./Nav/Sidebar";
 
 const Accueil = () => {
   return (
     <>
+    <Sidebar/>
       <TopNavbar />
       <div className="accueil-container">
         {/* Section Hero avec image de fond et texte en overlay */}

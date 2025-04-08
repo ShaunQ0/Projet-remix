@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-// Forcer l'import de styled-components pour SSR
+import { Link } from "@remix-run/react";
 import styledComponents from "styled-components";
 const styled = styledComponents.default || styledComponents;
 
-// Components
+// Components existants
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
+
 // Assets
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
@@ -29,60 +30,61 @@ export default function TopNavbar() {
         style={y > 100 ? { height: "60px" } : { height: "80px" }}
       >
         <NavInner className="container flexSpaceCenter">
-          <a href="/accueil" className="pointer flexNullCenter">
+          {/* Le logo renvoie vers la page d'accueil */}
+          <Link to="/" className="pointer flexNullCenter">
             <LogoIcon />
-          </a>
-          <BurderWrapper
+          </Link>
+          <BurgerWrapper
             className="pointer"
             onClick={() => toggleSidebar(!sidebarOpen)}
           >
             <BurgerIcon />
-          </BurderWrapper>
+          </BurgerWrapper>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <a href="/accueil" style={{ padding: "10px 15px" }}>
+              <Link to="/" style={{ padding: "10px 15px" }}>
                 Accueil
-              </a>
+              </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <a href="Forum" style={{ padding: "10px 15px" }}>
+              <Link to="/Forum" style={{ padding: "10px 15px" }}>
                 Forum
-              </a>
+              </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <a href="Activités" style={{ padding: "10px 15px" }}>
+              <Link to="/Activités" style={{ padding: "10px 15px" }}>
                 Activités
-              </a>
+              </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <a href="Contact" style={{ padding: "10px 15px" }}>
+              <Link to="/Contact" style={{ padding: "10px 15px" }}>
                 Nous connaître
-              </a>
+              </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <a href="/adherer" style={{ padding: "10px 15px" }}>
+              <Link to="/Adherer" style={{ padding: "10px 15px" }}>
                 Adhérer
-              </a>
+              </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <a href="Promouvoir" style={{ padding: "10px 15px" }}>
+              <Link to="/Promouvoir" style={{ padding: "10px 15px" }}>
                 Promouvoir
-              </a>
+              </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <a href="/apprendre" style={{ padding: "10px 15px" }}>
+              <Link to="/Apprendre" style={{ padding: "10px 15px" }}>
                 Apprendre
-              </a>
+              </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <a href="/enseigner" style={{ padding: "10px 15px" }}>
+              <Link to="/Enseigner" style={{ padding: "10px 15px" }}>
                 Enseigner
-              </a>
+              </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <a href="/divers" style={{ padding: "10px 15px" }}>
+              <Link to="/Divers" style={{ padding: "10px 15px" }}>
                 Divers
-              </a>
+              </Link>
             </li>
           </UlWrapper>
         </NavInner>
@@ -104,7 +106,7 @@ const NavInner = styled.div`
   height: 100%;
 `;
 
-const BurderWrapper = styled.button`
+const BurgerWrapper = styled.button`
   outline: none;
   border: 0;
   background-color: transparent;
